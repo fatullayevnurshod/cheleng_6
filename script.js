@@ -19,8 +19,16 @@ function gap() {
   }
 }
 
+function aylan(i) {
+  document.querySelector(".dice").style.transform = `rotate(${i * 180}deg)`;
+  document.querySelector(".dice").style.transition = "all 1s";
+  console.log(i);
+}
+let i = 0;
 icon.onclick = function () {
+  i++;
   gap();
+  aylan(i);
 };
 
 gap();
